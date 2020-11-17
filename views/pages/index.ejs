@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="fact-template">
+            <% facts.forEach(fact => { %>
+                <h2>Type: <%= fact.type %></h2>
+                <p>Text: <%= fact.text %></p>
+                <form action="/" method="POST">
+                <input hidden type="text" name ="type" value="<%= fact.type %>">
+                <input hidden type="text" name ="text" value="<%= fact.text %>">
+                <button type="submit">Add To Fav Facts</button>
+                </form>
+            <% }) %>
+        </section>
+    </main>  
+</body>
+</html>

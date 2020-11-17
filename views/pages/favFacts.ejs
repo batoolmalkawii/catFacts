@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% favFacts.forEach(fact => { %>
+        <h2>Type: <%= fact.type %></h2>
+        <p>Text: <%= fact.text %></p>
+        <a href="/facts<%= fact.id %>"><button>Show Fact</button></a>
+        <% }) %>
+
+</body>
+</html>

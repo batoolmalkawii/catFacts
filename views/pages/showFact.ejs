@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Type: <%= fact.type %></h2>
+    <p>Text: <%= fact.text %></p>
+    <button id="updateFactButton">Update Fact</button></a>
+    <form action="facts<%= fact.id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Fact</button></a>
+    </form>
+
+
+    <form style="display:none;" id="updateFactForm" action="facts<%= fact.id %>?_method=PUT" method="POST">
+        <input type="text" name="type" value="<%= fact.type %>">
+        <input type="text" name="text" value="<%= fact.text %>">
+        <button type="submit">Update Fact </button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS facts;
+
+CREATE TABLE facts(
+    id SERIAL PRIMARY KEY,
+    type VARCHAR(255),
+    text TEXT
+)
